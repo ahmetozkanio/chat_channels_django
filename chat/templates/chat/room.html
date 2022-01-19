@@ -150,7 +150,8 @@
         chatSocket.send(JSON.stringify({
             'command': 'new_message',
             'message': message,
-            'from': username
+            'from': username,
+			
         }));
 
         messageInputDom.value = '';
@@ -161,6 +162,7 @@
     }
 
     function createMessage(data) {
+	 
       var author = data['author'];
       var msgListTag = document.createElement('li');
       var imgTag = document.createElement('img');
